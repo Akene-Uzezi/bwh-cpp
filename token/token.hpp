@@ -9,6 +9,7 @@ enum class TokenType {
 
   INDENT,
   INT,
+  PLUS,
   ASSIGN,
   LPAREN,
   RPAREN,
