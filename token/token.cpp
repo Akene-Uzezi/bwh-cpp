@@ -4,10 +4,9 @@
 #include <unordered_map>
 namespace {
 const std::unordered_map<std::string_view, TokenType> keywords = {
-    {"+", TokenType::PLUS},     {"=", TokenType::ASSIGN},
-    {"(", TokenType::LPAREN},   {")", TokenType::RPAREN},
-    {"{", TokenType::RBRACE},   {"}", TokenType::LBRACE},
-    {";", TokenType::SEMICOLON}};
+    {"fn", TokenType::FUNCTION},
+    {"let", TokenType::LET},
+};
 }
 
 TokenType lookupIdent(std::string_view ident) {
@@ -44,6 +43,8 @@ std::string_view tokenTypeToString(TokenType type) {
     return "ILLEGAL";
   case TokenType::INT:
     return "INT";
+  case TokenType::FUNCTION:
+    return "fn";
   }
   return "UNKNOWN";
 }

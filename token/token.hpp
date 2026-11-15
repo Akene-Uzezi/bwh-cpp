@@ -16,7 +16,8 @@ enum class TokenType {
   RPAREN,
   LBRACE,
   RBRACE,
-  SEMICOLON
+  SEMICOLON,
+  FUNCTION
 };
 
 struct Token {
