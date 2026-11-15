@@ -1,4 +1,5 @@
 #include "token.hpp"
+#include <ostream>
 #include <string_view>
 #include <unordered_map>
 namespace {
@@ -43,4 +44,10 @@ std::string_view tokenTypeToString(TokenType type) {
     return "INT";
   }
   return "UNKNOWN";
+}
+
+std::ostream &operator<<(std::ostream &os, const Token &tok) {
+  os << "{Type: " << tokenTypeToString(tok.type) << ", Literal: \""
+     << tok.literal << "\"}";
+  return os;
 }
