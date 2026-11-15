@@ -20,6 +20,8 @@ TokenType lookupIdent(std::string_view ident) {
 
 std::string_view tokenTypeToString(TokenType type) {
   switch (type) {
+  case TokenType::LET:
+    return "let";
   case TokenType::PLUS:
     return "+";
   case TokenType::ASSIGN:

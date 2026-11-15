@@ -7,6 +7,7 @@ enum class TokenType {
   ILLEGAL,
   END_OF_FILE,
 
+  LET,
   IDENT,
   INT,
   PLUS,
